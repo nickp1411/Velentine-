@@ -303,8 +303,9 @@ function flip(card,page){
     },35);
   }
   card.classList.toggle("clicked");
-  const btn=document.querySelector(`#${page} button`);
-  if(btn) btn.disabled=false;
+  const buttons=document.querySelectorAll(`#${page} button`);
+  buttons.forEach(btn => btn.disabled = false);
+
 }
 
 function fireworks(){
